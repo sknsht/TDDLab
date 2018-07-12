@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDLab.Core", "TDDLab.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicUtils", "BasicUtils\BasicUtils.csproj", "{04359389-8905-4B7C-A525-50C39556883C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDLab.Tests", "TDDLab.Tests\TDDLab.Tests.csproj", "{3C9B4D9F-F97F-4607-AB25-3B026A126674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{04359389-8905-4B7C-A525-50C39556883C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04359389-8905-4B7C-A525-50C39556883C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04359389-8905-4B7C-A525-50C39556883C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9B4D9F-F97F-4607-AB25-3B026A126674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9B4D9F-F97F-4607-AB25-3B026A126674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9B4D9F-F97F-4607-AB25-3B026A126674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9B4D9F-F97F-4607-AB25-3B026A126674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
