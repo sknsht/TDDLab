@@ -24,15 +24,19 @@ namespace TDDLab.Tests
         }
 
         [Test]
-        public void invoiceLineShouldBeValid()
+        public void InvoiceLineShouldBeValid()
         {
             Assert.IsTrue(validInvoiceLine.IsValid);
         }
 
         [Test]
-        public void invoiceLineShouldNotBeValid()
+        public void InvoiceLineWithoutProductShouldNotBeValid()
         {
             Assert.IsFalse(withoutProduct.IsValid);
+        }
+
+        [Test]
+        public void InvoiceLineWithoutMoneyShouldNotBeValid() {
             Assert.IsFalse(withoutMoney.IsValid);
         }
 

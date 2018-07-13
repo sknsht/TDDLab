@@ -5,15 +5,15 @@ namespace TDDLab.Core.InvoiceMgmt
 {
     public class Address : ValidatedDomainObject, IValidatedObject
     {
-        public Address(string addresLine1, string city, string state, string zip)
+        public Address(string addresLine, string city, string state, string zip)
         {
-            AddressLine1 = addresLine1;
+            AddressLine = addresLine;
             City = city;
             State = state;
             Zip = zip;
         }
 
-        public string AddressLine1 { get; private set; }
+        public string AddressLine { get; private set; }
 
         public string City { get; private set; }
 
@@ -27,7 +27,7 @@ namespace TDDLab.Core.InvoiceMgmt
             {
                 get
                 {
-                    return new BusinessRule<Address>(MethodBase.GetCurrentMethod().Name, "AddressLine1 should be specified", address => address.AddressLine1.IsNotEmpty());
+                    return new BusinessRule<Address>(MethodBase.GetCurrentMethod().Name, "AddressLine should be specified", address => address.AddressLine.IsNotEmpty());
                 }
             }
             public static IBusinessRule<Address> City

@@ -11,27 +11,26 @@ namespace TDDLab.Tests
     [TestFixture]
     public class DomainExtensionsTest
     {
-        Money testMoney;
+        Money money;
         Money newMoney;
 
         [SetUp]
         public void SetUp()
         {
-            testMoney = new Money(42);
-            newMoney = testMoney.ToCurrency("PLN");
+            money = new Money(42);
+            newMoney = money.ToCurrency("PLN");
         }
 
         [Test]
-        public void toCurrencyTest()
+        public void ToCurrencyAmountShouldBeEqual()
         {
-            Assert.AreEqual(newMoney.Amount, testMoney.Amount);
-            Assert.AreEqual(newMoney.Currency, "PLN");
+            Assert.AreEqual(newMoney.Amount, money.Amount);
         }
 
         [TearDown]
         public void TearDown()
         {
-            testMoney = null;
+            money = null;
             newMoney  = null;
         }
     }

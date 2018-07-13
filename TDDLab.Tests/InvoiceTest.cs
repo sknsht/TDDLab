@@ -20,7 +20,7 @@ namespace TDDLab.Tests
         }
 
         [Test]
-        public void invoiceShouldNotBeValid()
+        public void InvoiceShouldNotBeValid()
         {
             Assert.IsFalse(notValidInvoice.IsValid);
         }

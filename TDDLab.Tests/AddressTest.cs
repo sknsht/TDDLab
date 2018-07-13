@@ -12,7 +12,7 @@ namespace TDDLab.Tests
     public class AddressTest
     {
         Address validAddress;
-        Address withoutAddress;
+        Address withoutAddressLine;
         Address withoutCity;
         Address withoutState;
         Address withoutZip;
@@ -20,36 +20,48 @@ namespace TDDLab.Tests
         [SetUp]
         public void SetUp()
         {
-            validAddress   = new Address("Grunwaldzka 190", "Gdańsk", "Pomorskie", "80-266");
-            withoutAddress = new Address("", "Gdańsk", "Pomorskie", "80-266");
-            withoutCity    = new Address("Grunwaldzka 190", "", "Pomorskie", "80-266");
-            withoutState   = new Address("Grunwaldzka 190", "Gdańsk", "", "80-266");
-            withoutZip     = new Address("Grunwaldzka 190", "Gdańsk", "Pomorskie", "");
+            validAddress       = new Address("Grunwaldzka 190", "Gdańsk", "Pomorskie", "80-266");
+            withoutAddressLine = new Address("", "Gdańsk", "Pomorskie", "80-266");
+            withoutCity        = new Address("Grunwaldzka 190", "", "Pomorskie", "80-266");
+            withoutState       = new Address("Grunwaldzka 190", "Gdańsk", "", "80-266");
+            withoutZip         = new Address("Grunwaldzka 190", "Gdańsk", "Pomorskie", "");
         }
 
         [Test]
-        public void addressShouldBeValid()
+        public void AddressShouldBeValid()
         {
             Assert.IsTrue(validAddress.IsValid);
         }
 
         [Test]
-        public void addressShouldNotBeValid()
+        public void AddressWithoutAddressLineShouldNotBeValid()
         {
-            Assert.IsFalse(withoutAddress.IsValid);
+            Assert.IsFalse(withoutAddressLine.IsValid);
+        }
+
+        [Test]
+        public void AddressWithoutCityShouldNotBeValid() {
             Assert.IsFalse(withoutCity.IsValid);
+        }
+
+        [Test]
+        public void AddressWithoutStateShouldNotBeValid() {
             Assert.IsFalse(withoutState.IsValid);
+        }
+
+        [Test]
+        public void AddressWithoutZipShouldNotBeValid() {
             Assert.IsFalse(withoutZip.IsValid);
         }
 
         [TearDown]
         public void TearDown()
         {
-            validAddress   = null;
-            withoutAddress = null;
-            withoutCity    = null;
-            withoutState   = null;
-            withoutZip     = null;
+            validAddress       = null;
+            withoutAddressLine = null;
+            withoutCity        = null;
+            withoutState       = null;
+            withoutZip         = null;
         }
     }
 }

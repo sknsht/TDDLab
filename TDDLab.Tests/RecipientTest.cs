@@ -20,20 +20,18 @@ namespace TDDLab.Tests
         {
             validRecipient = new Recipient("Maciej", new Address("Grunwaldzka 190", "Gdańsk", "Pomorskie", "80-266"));
             withoutName    = new Recipient("", new Address("Grunwaldzka 190", "Gdańsk", "Pomorskie", "80-266"));
-            withoutAddress = new Recipient("Maciej", null);
         }
 
         [Test]
-        public void invoiceLineShouldBeValid()
+        public void InvoiceLineShouldBeValid()
         {
             Assert.IsTrue(validRecipient.IsValid);
         }
 
         [Test]
-        public void invoiceLineShouldNotBeValid()
+        public void InvoiceLineWithoutNameShouldNotBeValid()
         {
             Assert.IsFalse(withoutName.IsValid);
-            //Assert.IsFalse(withoutAddress.IsValid);
         }
 
         [TearDown]

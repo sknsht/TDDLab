@@ -22,34 +22,33 @@ namespace TDDLab.Tests
         }
 
         [Test]
-        public void defaultCurrencyTest()
+        public void DefaultCurrencyTest()
         {
             Assert.AreEqual(validMoney.Currency, "USD");
         }
 
         [Test]
-        public void moneyToStringTest()
+        public void MoneyToStringTest()
         {
             Assert.AreEqual(validMoney.ToString(), "42USD");
         }
 
         [Test]
-        public void moneyShouldNotBeValid()
+        public void MoneyWithoutCurrencyShouldNotBeValid()
         {
             Assert.IsFalse(withoutCurrency.IsValid);
         }
 
         [Test]
-        public void moneyAddTest()
+        public void MoneyAddTest()
         {
             Assert.AreEqual((validMoney + validMoney).Amount, validMoney.Amount*2);
         }
 
         [Test]
-        public void moneyReduceTest()
+        public void MoneyReduceTest()
         {
             Assert.AreEqual((validMoney - validMoney).Amount, 0);
-            Assert.AreEqual((Money.ZERO - validMoney).Amount, 0);
         }
 
         [TearDown]
