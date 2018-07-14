@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="NMock3, Version=3.5.44.0, Culture=neutral, PublicKeyToken=cf53a760d95f4c33, processorArchitecture=MSIL">
+      <HintPath>..\packages\NMock3.3.5.44\lib\net40\NMock3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
@@ -44,12 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DomainExtensionsTest.cs" />
-    <Compile Include="InvoiceTest.cs" />
-    <Compile Include="RecipientTest.cs" />
-    <Compile Include="MoneyTest.cs" />
-    <Compile Include="InvoiceLineTest.cs" />
-    <Compile Include="AddressTest.cs" />
+    <Compile Include="InvoiceMgmtTests\DomainExtensionsTest.cs" />
+    <Compile Include="InvoiceMgmtTests\InvoiceTest.cs" />
+    <Compile Include="InvoiceMgmtTests\RecipientTest.cs" />
+    <Compile Include="InvoiceMgmtTests\MoneyTest.cs" />
+    <Compile Include="InvoiceMgmtTests\InvoiceLineTest.cs" />
+    <Compile Include="InvoiceMgmtTests\AddressTest.cs" />
+    <Compile Include="ProcessingTests\InvoiceProcessorImplTest.cs" />
+    <Compile Include="ProcessingTests\WorkerImplTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +78,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
