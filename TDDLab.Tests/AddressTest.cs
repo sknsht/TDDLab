@@ -1,16 +1,9 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TDDLab.Core.InvoiceMgmt;
 
-namespace TDDLab.Tests
-{
+namespace TDDLab.Tests {
     [TestFixture]
-    public class AddressTest
-    {
+    public class AddressTest {
         Address validAddress;
         Address withoutAddressLine;
         Address withoutCity;
@@ -18,8 +11,7 @@ namespace TDDLab.Tests
         Address withoutZip;
 
         [SetUp]
-        public void SetUp()
-        {
+        public void SetUp() {
             validAddress       = new Address("Grunwaldzka 190", "Gdańsk", "Pomorskie", "80-266");
             withoutAddressLine = new Address("", "Gdańsk", "Pomorskie", "80-266");
             withoutCity        = new Address("Grunwaldzka 190", "", "Pomorskie", "80-266");
@@ -28,14 +20,12 @@ namespace TDDLab.Tests
         }
 
         [Test]
-        public void AddressShouldBeValid()
-        {
+        public void AddressShouldBeValid() {
             Assert.IsTrue(validAddress.IsValid);
         }
 
         [Test]
-        public void AddressWithoutAddressLineShouldNotBeValid()
-        {
+        public void AddressWithoutAddressLineShouldNotBeValid() {
             Assert.IsFalse(withoutAddressLine.IsValid);
         }
 
@@ -55,8 +45,7 @@ namespace TDDLab.Tests
         }
 
         [TearDown]
-        public void TearDown()
-        {
+        public void TearDown() {
             validAddress       = null;
             withoutAddressLine = null;
             withoutCity        = null;
