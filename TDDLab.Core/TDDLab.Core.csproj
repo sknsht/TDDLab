@@ -83,7 +83,17 @@
     <Compile Include="InvoiceMgmt\InvoiceLine.cs" />
     <Compile Include="InvoiceMgmt\Money.cs" />
     <Compile Include="InvoiceMgmt\Recipient.cs" />
-    <Compile Include="Validation_sample.cs" />
+    <Compile Include="ProcessingInfrstr\IConfigurationSettings.cs" />
+    <Compile Include="ProcessingInfrstr\IExceptionHandler.cs" />
+    <Compile Include="ProcessingInfrstr\IInvoiceProcessor.cs" />
+    <Compile Include="ProcessingInfrstr\IMessagingFacility.cs" />
+    <Compile Include="ProcessingInfrstr\IStartable.cs" />
+    <Compile Include="ProcessingInfrstr\IWorker.cs" />
+    <Compile Include="ProcessingInfrstr\Message.cs" />
+    <Compile Include="ProcessingInfrstr\Metadata.cs" />
+    <Compile Include="ProcessingInfrstr\ProcessingResult.cs" />
+    <Compile Include="Processing\InvoiceProcessorImpl.cs" />
+    <Compile Include="Processing\WorkerImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +119,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

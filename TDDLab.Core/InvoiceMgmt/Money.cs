@@ -83,7 +83,6 @@ namespace TDDLab.Core.InvoiceMgmt {
         public static bool operator !=(Money left, Money right) {
             return !Equals(left, right);
         }
-
         #endregion
     }
 }
